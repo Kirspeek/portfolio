@@ -13,10 +13,7 @@ const MainSection = () => (
     <ProjectsSection />
     <ExperienceSection />
 
-    <ImageSection
-      imageSrc="/src/assets/5.png"
-      altText="A descriptive image of the project"
-    />
+    <ImageSection imageSrc="/src/assets/5.png" altText="" />
     <Footer />
   </div>
 );
