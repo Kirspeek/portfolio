@@ -24,11 +24,11 @@ function ExperienceSection() {
         contentRef.current.querySelector(`.${activeTab}-content`)
           ?.scrollHeight || 0;
 
-      // Dynamically adjust the height to match the active content
+      console.log(`Active Content Height (${activeTab}):`, activeContentHeight);
+
       contentRef.current.style.height = `${activeContentHeight}px`;
     }
-  }, [activeTab]); // Runs whenever the active tab changes
-
+  }, [activeTab]);
   return (
     <div
       id="experience"

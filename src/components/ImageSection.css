@@ -26,5 +26,6 @@
 @media (min-width: 2550px) {
   .responsive-image {
     max-width: 2000px;
+    padding-top: 10rem;
   }
 }
