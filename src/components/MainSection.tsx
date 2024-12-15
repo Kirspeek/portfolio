@@ -12,8 +12,7 @@ const MainSection = () => (
     <AboutSection />
     <ProjectsSection />
     <ExperienceSection />
-
-    <ImageSection imageSrc="/src/assets/5.png" altText="" />
+    <ImageSection imageSrc="src/assets/5.png" altText="" />
     <Footer />
   </div>
 );
