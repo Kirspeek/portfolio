@@ -358,7 +358,7 @@ a {
 
 @media screen and (min-width: 2550px) {
   .main-section {
-    padding: 5rem 0 5rem 0;
+    padding: 5rem 10rem 5rem 10rem;
   }
   .home-container {
     align-items: left;
@@ -373,7 +373,6 @@ a {
 
   .home-left {
     padding-bottom: 1rem;
-    align-items: left;
   }
 
   .intro-text {

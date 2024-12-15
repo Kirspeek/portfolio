@@ -8,23 +8,6 @@ function ExperienceSection() {
   const [fadeClass, setFadeClass] = useState("fade-in");
   const contentRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    if (contentRef.current) {
-      const tab1ContentHeight =
-        contentRef.current.querySelector(".tab1-content")?.scrollHeight || 0;
-      const tab2ContentHeight =
-        contentRef.current.querySelector(".tab2-content")?.scrollHeight || 0;
-      const tab3ContentHeight =
-        contentRef.current.querySelector(".tab3-content")?.scrollHeight || 0;
-      const maxHeight = Math.max(
-        tab1ContentHeight,
-        tab2ContentHeight,
-        tab3ContentHeight
-      );
-      contentRef.current.style.minHeight = `${maxHeight + 15}px`;
-    }
-  }, []);
-
   const handleTabChange = (tab: string) => {
     if (tab !== activeTab) {
       setFadeClass("fade-out");
@@ -34,6 +17,17 @@ function ExperienceSection() {
       }, 500);
     }
   };
+
+  useEffect(() => {
+    if (contentRef.current) {
+      const activeContentHeight =
+        contentRef.current.querySelector(`.${activeTab}-content`)
+          ?.scrollHeight || 0;
+
+      // Dynamically adjust the height to match the active content
+      contentRef.current.style.height = `${activeContentHeight}px`;
+    }
+  }, [activeTab]); // Runs whenever the active tab changes
 
   return (
     <div
@@ -125,28 +119,6 @@ function ExperienceSection() {
                     significantly improving data processing and system
                     reliability.
                   </li>
-                  <li>
-                    Integrated monitoring features for email blacklists,
-                    empowering users to proactively identify and address
-                    potential delivery issues, improving overall email
-                    deliverability rates.
-                  </li>
-                  <li>
-                    Engineered a Safe Email Warming feature that ensures smooth
-                    IP and domain warming, fostering credibility and trust with
-                    email service providers.
-                  </li>
-                  <li>
-                    Conducted extensive unit and integration testing across the
-                    platform, achieving over 90% code coverage and ensuring the
-                    stability and reliability of the application.
-                  </li>
-                  <li>
-                    Collaborated closely with cross-functional teams to gather
-                    requirements, identify pain points, and deliver user-focused
-                    solutions that align with client needs and industry best
-                    practices.
-                  </li>
                 </ul>
               </div>
             )}
@@ -158,7 +130,7 @@ function ExperienceSection() {
                   <strong>
                     <CompanyHoverCard
                       label="Code Academy"
-                      description="Mate Academy is an innovative EdTech startup revolutionizing IT education through its gamified, AI-friendly LMS platform. By offering free training until employment, Mate prepares students to meet job market demands, achieving an 80% job placement rate and empowering over 4,000 graduates to build successful IT careers."
+                      description="Mate Academy is an innovative EdTech startup revolutionizing IT education through its gamified, AI-friendly LMS platform."
                       followersCount="5M"
                       employeesCount="10K+"
                       link="https://www.linkedin.com/school/mateacademy"
@@ -181,16 +153,6 @@ function ExperienceSection() {
                     Utilized JavaScript and TypeScript to implement dynamic
                     functionality, creating clean, maintainable, and type-safe
                     code for seamless interface logic.
-                  </li>
-                  <li>
-                    Designed and implemented smooth CSS animations and
-                    transitions, improving user interactions while adhering to
-                    design standards without compromising performance.
-                  </li>
-                  <li>
-                    Collaborated with teams using Git for version control,
-                    ensuring code stability, efficient project management, and
-                    seamless integration across development stages.
                   </li>
                 </ul>
               </div>

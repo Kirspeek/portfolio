@@ -1,0 +1,30 @@
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 376px) {
+  .responsive-image {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-image {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 2550px) {
+  .responsive-image {
+    max-width: 2000px;
+  }
+}

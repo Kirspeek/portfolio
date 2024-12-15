@@ -3,10 +3,7 @@ import "./ProjectsSection.css";
 import SectionTitle from "./SectionTitle";
 
 const ProjectsSection = () => (
-  <div
-    id="projects"
-    className="main-section min-h-screen w-full  flex items-center"
-  >
+  <div id="projects" className="min-h-screen w-full  flex items-center">
     <div className="projects-section flex flex-col justify-center w-full">
       <SectionTitle sectionNumber={"02"} name="Things I've Built" />
 

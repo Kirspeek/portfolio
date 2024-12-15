@@ -6,7 +6,7 @@
   width: 100%;
   max-width: 3000px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+
   gap: 2rem; /* Spacing between text and image containers */
   box-sizing: border-box;
 }
@@ -189,14 +189,13 @@
 @media screen and (max-width: 768px) {
   .project-title {
     font-size: 14px;
-    padding-left: 3rem;
   }
 
   .project-desc {
+    padding-top: 2rem;
     font-size: 12px;
     line-height: 24px;
     text-align: left;
-    padding-right: 4rem;
   }
 
   .tech-stack li {
@@ -208,7 +207,6 @@
 @media screen and (max-width: 376px) {
   .project-title {
     font-size: 12px;
-    padding-left: 4rem;
   }
 
   .project-desc {

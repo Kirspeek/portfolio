@@ -1,5 +1,5 @@
 .section {
-  padding-top: 3rem;
+  padding: 3rem 0 3rem 0;
 }
 .tabs-container {
   display: flex;
@@ -105,7 +105,6 @@
   flex-grow: 1;
   position: relative;
   transition: height 0.5s ease;
-  min-height: 350px;
 }
 
 .tabs-content {
@@ -379,7 +378,7 @@ a {
     line-height: 24px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 376px) {
   .tabs-content {
     font-size: 12px;
     line-height: 24px;
@@ -400,6 +399,10 @@ a {
     padding-right: 2rem;
     align-items: center;
     justify-content: center;
+  }
+  .exp-bullets li {
+    font-size: 12px;
+    line-height: 24px;
   }
 }
 
