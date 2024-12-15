@@ -285,6 +285,8 @@ a {
     font-size: 12px;
     line-height: 24px;
     text-align: left;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 900;
   }
 }
 
@@ -335,7 +337,7 @@ a {
 
   .d-parag {
     font-size: 10px;
-    line-height: 24px;
+    line-height: 20px;
   }
 }
 
