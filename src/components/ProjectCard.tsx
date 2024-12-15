@@ -1,11 +1,11 @@
 import IconExternal from "./icons/IconExternal";
 import IconGitHub from "./icons/IconGitHub";
-import gameHubThumbnail from "../assets/game-hub-thumbnail.png";
-import gameHubGif from "../assets/gameHubDemoGif.gif";
-import issueTrackerThumbnail from "../assets/IssueTrackerThumbnail.png";
-import issueTrackerGif from "../assets/IssueTrackerGif_20s.gif";
-import littleLemonThumbnail from "../assets/little_lemon_thumbnail.png";
-import littleLemonGif from "../assets/LittleLemonDemoGif.gif";
+import gameHubThumbnail from "/public/assets/game-hub-thumbnail.png";
+import gameHubGif from "/public/assets/gameHubDemoGif.gif";
+import issueTrackerThumbnail from "/public/assets/IssueTrackerThumbnail.png";
+import issueTrackerGif from "/public/assets/IssueTrackerGif_20s.gif";
+import littleLemonThumbnail from "/public/assets/little_lemon_thumbnail.png";
+import littleLemonGif from "/public/assets/LittleLemonDemoGif.gif";
 import "./ProjectsSection.css";
 
 interface Props {

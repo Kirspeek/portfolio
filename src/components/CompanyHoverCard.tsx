@@ -1,7 +1,7 @@
 import * as HoverCard from "@radix-ui/react-hover-card";
 
-import salesforceLogo from "../assets/salesforce_logo.jpg";
-import noLogo from "../assets/question.png";
+import salesforceLogo from "/public/assets/salesforce_logo.jpg";
+import noLogo from "/public/assets/question.png";
 import LinkedinButton from "./LinkedinButton";
 
 interface Props {
