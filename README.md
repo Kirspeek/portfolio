@@ -22,7 +22,7 @@
 
 <p align="center">
    <a href="https://iryna-che-portfolio.vercel.app/">
-    <img src="src/assets/portfolio_animated.gif">
+
   </a>
 </p>
 
