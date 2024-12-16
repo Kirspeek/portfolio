@@ -76,7 +76,6 @@
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 900;
   font-optical-sizing: auto;
-
   padding-bottom: 2rem;
 }
 
@@ -97,12 +96,12 @@
   animation: fadeInUp 1s ease forwards;
   font-size: 50px;
   line-height: 50px;
-
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
   letter-spacing: 6px;
   margin: 0;
   color: var(--gray-color);
-  font-family: "Dancing Script", cursive;
-  font-weight: 900;
   padding-bottom: 2rem;
 }
 
@@ -119,7 +118,7 @@
   font-size: 45px;
   font-weight: 900;
   line-height: 50px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   margin: 0;
   text-transform: uppercase;
 }
@@ -250,6 +249,14 @@ a {
   .intro-text {
     padding-top: 50px;
   }
+  .catchy-phrase {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .catchy-phrase {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -301,12 +308,12 @@ a {
   }
 
   .name-text {
-    font-size: 28px;
+    font-size: 34px;
     line-height: 65px;
   }
 
   .catchy-phrase {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
     padding-bottom: 50px;
   }
@@ -328,16 +335,15 @@ a {
   }
 
   .name-text {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 28px;
     font-weight: 900;
-
     font-optical-sizing: auto;
     font-weight: 700;
   }
 
   .catchy-phrase {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 28px;
     padding-bottom: 50px;
   }
@@ -394,8 +400,8 @@ a {
   }
 
   .catchy-phrase {
-    font-size: 55px;
-    line-height: 2.2rem;
+    font-size: 45px;
+    line-height: 2rem;
     padding-bottom: 2rem;
   }
 
