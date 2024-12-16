@@ -46,7 +46,7 @@
 }
 
 .project-desc {
-  font-family: "Source Code Pro", monospace;
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 900;
@@ -211,7 +211,7 @@
 
   .project-desc {
     font-size: 10px;
-    line-height: 24px;
+    line-height: 20px;
     text-align: left;
   }
 

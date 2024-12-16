@@ -73,10 +73,10 @@
 .d-parag {
   opacity: 0;
   animation: fadeInUp 1s ease forwards;
-  font-family: "Source Code Pro", monospace;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 900;
   font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+
   padding-bottom: 2rem;
 }
 
@@ -95,13 +95,14 @@
 .name-text {
   animation-delay: 0.4s;
   animation: fadeInUp 1s ease forwards;
-  font-size: 45px;
+  font-size: 50px;
   line-height: 50px;
-  text-transform: uppercase;
+
   letter-spacing: 6px;
   margin: 0;
   color: var(--gray-color);
-  font-family: "Bevan", serif;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 900;
   padding-bottom: 2rem;
 }
 
@@ -115,7 +116,7 @@
 
 .catchy-phrase {
   animation-delay: 0.6s;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 900;
   line-height: 50px;
   letter-spacing: 2px;
@@ -320,17 +321,23 @@ a {
     background: none;
     opacity: 1;
     padding: 0;
+    padding-left: 1rem;
   }
   .intro-text {
     font-size: 12px;
   }
 
   .name-text {
-    font-size: 18px;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: 900;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
   }
 
   .catchy-phrase {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 28px;
     padding-bottom: 50px;
   }

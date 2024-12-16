@@ -59,7 +59,7 @@ function ExperienceSection() {
           </div>
 
           {/* Mobile Buttons */}
-          <div className="flex flex-row md:hidden md:invisible w-full justify-between px-8 pb-8">
+          <div className="flex flex-row md:hidden md:invisible w-full justify-between pb-8">
             <button
               className={`tabs-trigger-mobile ${
                 activeTab === "tab1" ? "active" : ""

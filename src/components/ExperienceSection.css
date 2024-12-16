@@ -57,6 +57,9 @@
 }
 
 .tabs-trigger-mobile {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
   position: relative;
   padding: 12px 16px;
   cursor: pointer;
@@ -65,7 +68,7 @@
     color 0.2s ease;
   border: none;
   text-align: center;
-  color: rgb(148, 163, 184);
+  color: #b8b8b8;
   min-height: none !important;
 }
 
@@ -76,7 +79,7 @@
   left: 2px;
   height: 1px;
   width: 100%;
-  background-color: rgba(184, 184, 184, 0.5);
+  background-color: #b8b8b8;
   transition: background-color 0.2s ease;
 }
 
@@ -97,7 +100,6 @@
 }
 
 .tabs-trigger-mobile:hover {
-  background-color: rgba(56, 189, 248, 0.2);
   color: #f1c40f;
 }
 
@@ -112,7 +114,7 @@
   opacity: 0;
   animation-duration: 0.25s;
   animation-fill-mode: both;
-  font-family: "Source Code Pro", monospace;
+  font-family: "IBM Plex Sans", sans-serif;
   font-optical-sizing: auto;
   letter-spacing: 3px;
   font-weight: 900;
@@ -375,7 +377,7 @@ a {
 
   .exp-bullets li {
     font-size: 10px;
-    line-height: 24px;
+    line-height: 20px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 376px) {

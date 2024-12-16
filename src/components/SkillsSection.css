@@ -58,7 +58,7 @@
   line-height: 26px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: "Source Code Pro", monospace;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 900;
   color: var(--gray-color);
   margin: 0 auto;
@@ -190,7 +190,7 @@
 @media screen and (max-width: 376px) {
   .about-intro {
     font-size: 10px;
-    line-height: 24px;
+    line-height: 20px;
   }
   .code-right {
     padding: 5rem 0 5rem 0;
