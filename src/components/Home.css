@@ -101,7 +101,7 @@
   letter-spacing: 6px;
   margin: 0;
   color: var(--gray-color);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Dancing Script", cursive;
   font-weight: 900;
   padding-bottom: 2rem;
 }
@@ -331,7 +331,7 @@ a {
     font-size: 30px;
     line-height: 28px;
     font-weight: 900;
-    font-family: "Dancing Script", cursive;
+
     font-optical-sizing: auto;
     font-weight: 700;
   }
