@@ -1,10 +1,36 @@
+import { useEffect, useRef } from "react";
 import "./SkillsSection.css";
 import MyCodeComponent from "./MyCodeComponent";
 
 const SkillsSection = () => {
+  const aboutIntroRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (aboutIntroRef.current) {
+      observer.observe(aboutIntroRef.current);
+    }
+
+    return () => {
+      if (aboutIntroRef.current) {
+        observer.unobserve(aboutIntroRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="skills-section">
-      <div className="about-intro">
+      <div ref={aboutIntroRef} className="about-intro">
         Hello there!
         <br />
         <br />

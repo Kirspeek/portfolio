@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import IconExternal from "./icons/IconExternal";
 import IconGitHub from "./icons/IconGitHub";
 import gameHubThumbnail from "/public/assets/game-hub-thumbnail.png";
@@ -41,57 +42,66 @@ const getImageByName = (name: string) => {
   return imgMap || defaultMap;
 };
 
-const ProjectCard = ({
-  name,
-  repoLink,
-  liveLink,
-  description,
-  skills,
-}: Props) => {
-  const projectImages = getImageByName(name);
+const ProjectCard = forwardRef<HTMLDivElement, Props>(
+  ({ name, repoLink, liveLink, description, skills }, ref) => {
+    const projectImages = getImageByName(name);
 
-  return (
-    <div className="project-card flex lg:flex-row">
-      <div className="left-container">
-        <div className="flex flex-row w-full items-center justify-between">
-          <div className="project-title">
-            <a href={liveLink} target="_blank">
-              {name}
-            </a>
+    return (
+      <div ref={ref} className="project-card flex lg:flex-row">
+        <div className="left-container">
+          <div className="flex flex-row w-full items-center justify-between">
+            <div className="project-title">
+              <a href={liveLink} target="_blank" rel="noopener noreferrer">
+                {name}
+              </a>
+            </div>
+            <div>
+              <a
+                href={repoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-link"
+              >
+                <IconGitHub />
+              </a>
+              {liveLink && (
+                <a
+                  href={liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon-link"
+                >
+                  <IconExternal />
+                </a>
+              )}
+            </div>
           </div>
-          <div>
-            <a href={repoLink} target="_blank" className="icon-link">
-              <IconGitHub />
-            </a>
-            <a href={liveLink} target="_blank" className="icon-link">
-              <IconExternal />
-            </a>
+          <div className="project-desc">{description}</div>
+          <ul className="tech-stack">
+            {skills.map((skill) => (
+              <li key={skill}>{skill}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="image-wraper-container xl:flex flex-1 px-8 items-center relative">
+          <div className="image-wrapper">
+            <img
+              src={projectImages.static}
+              alt={`${name} Static Image`}
+              className="static-image xl:max-w-sm"
+            />
+            <img
+              src={projectImages.gif}
+              alt={`${name} Animated Image`}
+              className="animated-image xl:max-w-sm"
+            />
+            <div className="hover-bg"></div>
           </div>
         </div>
-        <div className="project-desc">{description}</div>
-        <ul className="tech-stack">
-          {skills.map((skill) => (
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
       </div>
-      <div className=" image-wraper-container hidden xl:flex flex-1 px-8 items-center relative">
-        <div className="image-wrapper">
-          <img
-            src={projectImages.static}
-            alt="Project Static Image"
-            className="static-image xl:max-w-sm"
-          />
-          <img
-            src={projectImages.gif}
-            alt="Project Animated Image"
-            className="animated-image xl:max-w-sm"
-          />
-          <div className="hover-bg"></div>
-        </div>
-      </div>
-    </div>
-  );
-};
+    );
+  }
+);
 
 export default ProjectCard;

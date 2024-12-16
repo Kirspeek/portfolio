@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-
-import "./MyCodeComponent.css";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import "./MyCodeComponent.css";
 
 const codeString = `
 const developer = {
@@ -35,6 +34,7 @@ const developer = {
 
 const MyCodeComponent: React.FC = () => {
   const [typedCode, setTypedCode] = useState<string>("");
+  const codeTabRef = useRef(null);
 
   useEffect(() => {
     let cursorPosition = 0;
@@ -50,13 +50,31 @@ const MyCodeComponent: React.FC = () => {
 
     type();
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (codeTabRef.current) {
+      observer.observe(codeTabRef.current);
+    }
+
     return () => {
+      if (codeTabRef.current) {
+        observer.unobserve(codeTabRef.current);
+      }
       setTypedCode("");
     };
   }, []);
 
   return (
-    <div className="code-tab">
+    <div ref={codeTabRef} className="code-tab">
       <div className="tab-header">
         <span className="dot red"></span>
         <span className="dot yellow"></span>

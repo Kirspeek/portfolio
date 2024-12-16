@@ -6,7 +6,17 @@
   --yellow-color: #f1c40f;
 }
 
-@keyframes fadeInUp {
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromBottom {
   0% {
     opacity: 0;
     transform: translateY(50px);
@@ -16,23 +26,50 @@
     transform: translateY(0);
   }
 }
-
-@keyframes shine {
+@keyframes slideInFromLeft {
   0% {
-    box-shadow:
-      0 0 5px var(--yellow-color),
-      0 0 10px var(--yellow-color);
-  }
-  50% {
-    box-shadow:
-      0 0 10px var(--yellow-color),
-      0 0 20px var(--yellow-color);
+    opacity: 0;
+    transform: translateX(-50px);
   }
   100% {
-    box-shadow:
-      0 0 5px var(--yellow-color),
-      0 0 10px var(--yellow-color);
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.intro-text {
+  opacity: 0;
+  animation: slideInFromTop 1.5s ease forwards; /* Slide in from top */
+}
+
+.name-text {
+  opacity: 0;
+  animation: slideInFromLeft 1.5s ease forwards; /* Slide in from left */
+}
+
+.catchy-phrase {
+  opacity: 0;
+  animation: slideInFromRight 1.5s ease forwards; /* Slide in from right */
+}
+
+.d-parag {
+  opacity: 0;
+  animation: slideInFromBottom 1.5s ease forwards; /* Slide in from bottom */
+}
+
+.home-right {
+  opacity: 0;
+  animation: slideInFromRight 1.5s ease forwards; /* Slide in from right */
 }
 .home-container {
   display: flex;
@@ -71,8 +108,6 @@
 .intro-text,
 .catchy-phrase,
 .d-parag {
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 900;
   font-optical-sizing: auto;
@@ -80,7 +115,6 @@
 }
 
 .intro-text {
-  animation-delay: 0.2s;
   color: var(--green-color);
   letter-spacing: 3px;
   font-weight: 900;
@@ -92,8 +126,6 @@
 }
 
 .name-text {
-  animation-delay: 0.4s;
-  animation: fadeInUp 1s ease forwards;
   font-size: 50px;
   line-height: 50px;
   font-family: "Permanent Marker", cursive;
@@ -114,7 +146,6 @@
 }
 
 .catchy-phrase {
-  animation-delay: 0.6s;
   font-size: 45px;
   font-weight: 900;
   line-height: 50px;
@@ -124,7 +155,6 @@
 }
 
 .d-parag {
-  animation-delay: 0.8s;
   font-size: 18px;
   line-height: 26px;
   letter-spacing: 2px;
