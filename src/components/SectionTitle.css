@@ -50,7 +50,7 @@
     visibility: hidden;
   }
   .name-section {
-    padding: 1rem 0 3rem 0;
+    padding: 1rem;
   }
   .section-number {
     font-size: 18px;
@@ -60,9 +60,6 @@
   }
 }
 @media screen and (max-width: 376px) {
-  .name-section {
-    padding: 1rem 0 3rem 0;
-  }
   .section-number {
     font-size: 14px;
   }
@@ -72,7 +69,7 @@
 }
 @media screen and (min-width: 2550px) {
   .name-section {
-    padding: 2rem 0 2rem 0;
+    padding: 2rem;
   }
   .section-number {
     font-size: 34px;

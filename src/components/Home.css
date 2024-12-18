@@ -111,7 +111,7 @@
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 900;
   font-optical-sizing: auto;
-  padding-bottom: 2rem;
+  padding: 2rem 0 2rem 0;
 }
 
 .intro-text {
@@ -134,7 +134,7 @@
   letter-spacing: 6px;
   margin: 0;
   color: var(--gray-color);
-  padding-bottom: 2rem;
+  padding: 2rem;
 }
 
 .faded-text {
@@ -243,6 +243,7 @@ a {
   justify-content: flex-start;
   z-index: 0;
   margin: 0 auto;
+  padding-left: 1rem;
 }
 
 .main-section::before {
@@ -259,7 +260,7 @@ a {
 
 @media screen and (max-width: 1200px) {
   .main-section {
-    padding: 5rem 0 5rem 0;
+    padding: 5rem 0 5rem 1rem;
   }
   .home-container {
     flex-direction: column;
@@ -274,10 +275,6 @@ a {
 
   .home-left {
     padding-bottom: 1rem;
-  }
-
-  .intro-text {
-    padding-top: 50px;
   }
   .catchy-phrase {
     font-size: 30px;
@@ -296,10 +293,6 @@ a {
   }
 
   .home-left {
-    padding: 1rem 0;
-  }
-
-  .home-right {
     padding: 1rem 0;
   }
 
@@ -357,8 +350,6 @@ a {
   .main-section {
     background: none;
     opacity: 1;
-    padding: 0;
-    padding-left: 1rem;
   }
   .intro-text {
     font-size: 12px;
@@ -375,12 +366,12 @@ a {
   .catchy-phrase {
     font-size: 14px;
     line-height: 28px;
-    padding-bottom: 50px;
   }
 
   .d-parag {
     font-size: 10px;
     line-height: 20px;
+    padding: 1rem;
   }
 }
 
@@ -418,10 +409,6 @@ a {
 
   .home-left {
     padding-bottom: 1rem;
-  }
-
-  .intro-text {
-    padding-top: 50px;
   }
 
   .name-text {

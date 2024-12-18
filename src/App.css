@@ -3,27 +3,22 @@
 @tailwind utilities;
 
 .scrollable {
-  /* Ensure the section is scrollable */
   overflow-y: scroll;
 }
 
-/* Customize the scrollbar width */
 .scrollable::-webkit-scrollbar {
-  width: 18px;
+  width: 1rem;
 }
 
-/* Customize the scrollbar track */
 .scrollable::-webkit-scrollbar-track {
   background: none;
 }
 
-/* Customize the scrollbar thumb */
 .scrollable::-webkit-scrollbar-thumb {
-  background-color: #213052; /* color of the scrollbar */
+  background-color: #f1c40f;
   border-radius: 10px;
 }
 
-/* Customize the scrollbar thumb on hover */
 .scrollable::-webkit-scrollbar-thumb:hover {
   background: rgba(56, 189, 248, 0.5);
 }
