@@ -235,4 +235,7 @@ body.with-sidebar {
     width: 25px;
     height: 25px;
   }
+  .desctop-sidebar {
+    display: none;
+  }
 }

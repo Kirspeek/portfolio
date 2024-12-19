@@ -37,8 +37,8 @@ const Sidebar = () => {
   return (
     <>
       {/* Desktop Sidebar */}
-      <div className="hidden md:flex h-screen py-5 px-8">
-        <div className="hidden md:flex flex-col">
+      <div className="desctop-sidebar md:flex h-screen py-5 px-8">
+        <div className="md:flex flex-col">
           {/* Section Buttons */}
           <div className="flex-1 flex items-center justify-center">
             <div className="nav-section flex-1 flex flex-col items-center">
