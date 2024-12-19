@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 import IconExternal from "./icons/IconExternal";
 import IconGitHub from "./icons/IconGitHub";
 import gameHubThumbnail from "/public/assets/game-hub-thumbnail.png";
@@ -43,13 +43,46 @@ const getImageByName = (name: string) => {
 };
 
 const ProjectCard = forwardRef<HTMLDivElement, Props>(
-  ({ name, repoLink, liveLink, description, skills }, ref) => {
+  ({ name, repoLink, liveLink, description, skills }) => {
+    const leftContainerRef = useRef<HTMLDivElement | null>(null);
+    const imageWrapperRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      if (leftContainerRef.current) {
+        observer.observe(leftContainerRef.current);
+      }
+
+      if (imageWrapperRef.current) {
+        observer.observe(imageWrapperRef.current);
+      }
+
+      return () => {
+        if (leftContainerRef.current) {
+          observer.unobserve(leftContainerRef.current);
+        }
+
+        if (imageWrapperRef.current) {
+          observer.unobserve(imageWrapperRef.current);
+        }
+      };
+    }, []);
+
     const projectImages = getImageByName(name);
 
     return (
-      <div ref={ref} className="project-card">
-        {" "}
-        <div className="left-container">
+      <div className="project-card">
+        <div ref={leftContainerRef} className="left-container">
           <div className="flex flex-row w-full items-center justify-between">
             <h3 className="project-title">
               <a href={liveLink} target="_blank" rel="noopener noreferrer">
@@ -84,7 +117,7 @@ const ProjectCard = forwardRef<HTMLDivElement, Props>(
             ))}
           </ul>
         </div>
-        <div className="image-wrapper-container">
+        <div ref={imageWrapperRef} className="image-wrapper-container">
           <div className="image-wrapper">
             <img
               src={projectImages.static}

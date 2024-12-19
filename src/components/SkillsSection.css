@@ -1,5 +1,5 @@
 :root {
-  --gray-color: #b8b8b8;
+  --gray-color: #808080;
   --blue: #3679f6;
   --red: #d92d2b;
   --orange: #ff7b00;
@@ -30,10 +30,10 @@
   text-align: left;
   font-size: 18px;
   line-height: 26px;
-  letter-spacing: 2px;
+  font-family: "Space Mono", monospace;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 900;
   color: var(--gray-color);
   margin: 0 auto;
   height: 100%;
@@ -48,11 +48,13 @@
   opacity: 1;
   transform: translateY(0);
 }
+.about-intro:hover {
+  color: #b9b9b9;
+}
 .code-right {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem 0 1rem;
 }
 .ones {
   color: var(--red-color);

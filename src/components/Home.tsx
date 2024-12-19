@@ -3,36 +3,43 @@ import "./Home.css";
 import Lego from "./Lego";
 
 function Home() {
-  const homeRefs = useRef<(HTMLDivElement | HTMLParagraphElement | null)[]>([]);
+  const homeLeftRef = useRef<HTMLDivElement | null>(null);
+  const homeRightRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.remove("hidden");
-            observer.unobserve(entry.target);
+            entry.target.classList.add("animate");
           }
         });
       },
       { threshold: 0.1 }
     );
 
-    homeRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
+    if (homeLeftRef.current) {
+      observer.observe(homeLeftRef.current);
+    }
+
+    if (homeRightRef.current) {
+      observer.observe(homeRightRef.current);
+    }
 
     return () => {
-      homeRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
+      if (homeLeftRef.current) {
+        observer.unobserve(homeLeftRef.current);
+      }
+
+      if (homeRightRef.current) {
+        observer.unobserve(homeRightRef.current);
+      }
     };
   }, []);
 
   return (
     <div id="home" className="home-container w-full flex">
-      {/* Left Section */}
-      <div className="home-left">
+      <div ref={homeLeftRef} className="home-left">
         <p className="intro-text">Hi there! My name is</p>
         <h1 className="name-text">
           Iryna <br /> Cherepenko
@@ -60,9 +67,7 @@ function Home() {
           </a>
         </p>
       </div>
-
-      {/* Right Section */}
-      <div className="home-right">
+      <div ref={homeRightRef} className="home-right">
         <Lego />
       </div>
     </div>

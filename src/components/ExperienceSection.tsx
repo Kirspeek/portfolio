@@ -7,6 +7,7 @@ function ExperienceSection() {
   const [activeTab, setActiveTab] = useState("tab1");
   const [fadeClass, setFadeClass] = useState("fade-in");
   const contentRef = useRef<HTMLDivElement | null>(null);
+  const tabsContainerRef = useRef<HTMLDivElement | null>(null);
 
   const handleTabChange = (tab: string) => {
     if (tab !== activeTab) {
@@ -29,6 +30,30 @@ function ExperienceSection() {
       contentRef.current.style.height = `${activeContentHeight}px`;
     }
   }, [activeTab]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (tabsContainerRef.current) {
+      observer.observe(tabsContainerRef.current);
+    }
+
+    return () => {
+      if (tabsContainerRef.current) {
+        observer.unobserve(tabsContainerRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div
       id="experience"
@@ -37,7 +62,10 @@ function ExperienceSection() {
       <div className="flex flex-col justify-center w-full">
         <SectionTitle sectionNumber="03" name="Where I've Worked" />
 
-        <div className="tabs-container flex flex-col md:flex-row">
+        <div
+          ref={tabsContainerRef}
+          className="tabs-container flex flex-col md:flex-row"
+        >
           {/* Desktop Buttons */}
           <div className="tabs-list md:flex flex-col min-w-48 items-center justify-center">
             <button
@@ -59,7 +87,7 @@ function ExperienceSection() {
           </div>
 
           {/* Mobile Buttons */}
-          <div className="flex flex-row md:hidden md:invisible w-full justify-between pb-8">
+          <div className="flex flex-row md:hidden md:invisible w-full justify-center pb-8">
             <button
               className={`tabs-trigger-mobile ${
                 activeTab === "tab1" ? "active" : ""

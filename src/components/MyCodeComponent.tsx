@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  synthwave84,
+  vscDarkPlus,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
 import "./MyCodeComponent.css";
 
 const codeString = `
@@ -84,10 +87,12 @@ const MyCodeComponent: React.FC = () => {
         <SyntaxHighlighter
           language="typescript"
           style={{
-            ...dracula,
+            ...synthwave84,
             'pre[class*="language-"]': {
-              ...dracula['pre[class*="language-"]'],
+              ...vscDarkPlus['pre[class*="language-"]'],
               background: "rgba(0, 0, 0, 0.9)",
+              fontSize: "12px",
+              lineHeight: "1.5",
             },
           }}
         >

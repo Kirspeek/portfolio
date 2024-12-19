@@ -2,8 +2,16 @@
   display: flex;
   justify-content: center;
   padding-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 2s ease-in-out,
+    transform 2s ease-in-out;
 }
-
+.tabs-container.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
 .tabs-list {
   display: flex;
   flex-direction: column;
@@ -20,7 +28,7 @@
     color 0.2s ease;
   border: none;
   text-align: left;
-  color: rgb(148, 163, 184);
+  color: #808080;
 }
 
 .tabs-trigger::before {
@@ -30,7 +38,7 @@
   left: 2px;
   height: 100%;
   width: 1px;
-  background-color: rgba(148, 163, 184, 0.5);
+  background-color: rgba(80, 80, 80, 0.5);
   transition: background-color 0.2s ease;
 }
 
@@ -50,13 +58,14 @@
 }
 
 .tabs-trigger:hover {
-  background-color: rgba(184, 184, 184, 0.5);
+  background-color: rgba(80, 80, 80, 0.5);
   color: #f1c40f;
 }
 
 .tabs-trigger-mobile {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 900;
+  font-family: "Space Mono", monospace;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   position: relative;
   padding: 8px 10px;
@@ -66,7 +75,7 @@
     color 0.2s ease;
   border: none;
   text-align: center;
-  color: #b8b8b8;
+  color: #808080;
   min-height: none !important;
 }
 
@@ -77,7 +86,7 @@
   left: 2px;
   height: 1px;
   width: 100%;
-  background-color: #b8b8b8;
+  background-color: #808080;
   transition: background-color 0.2s ease;
 }
 
@@ -112,12 +121,14 @@
   opacity: 0;
   animation-duration: 0.25s;
   animation-fill-mode: both;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-optical-sizing: auto;
-  letter-spacing: 3px;
-  font-weight: 900;
+  font-family: "Space Mono", monospace;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-style: normal;
+}
+
+.tabs-content:hover {
+  color: #b9b9b9;
 }
 
 .fade-in {
@@ -270,7 +281,7 @@ a {
   color: var(--mauve-10);
 }
 .Text.bold {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .company-desc {
