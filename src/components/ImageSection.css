@@ -31,13 +31,19 @@
 
 @media (max-width: 768px) {
   .responsive-image {
-    max-width: 600px;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .responsive-image {
+    max-width: 400px;
   }
 }
 
 @media (min-width: 2550px) {
   .responsive-image {
-    max-width: 1500px;
+    max-width: 1000px;
     padding-top: 10rem;
   }
 }

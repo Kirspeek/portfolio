@@ -70,7 +70,7 @@
 }
 
 .name-text {
-  font-size: 45px;
+  font-size: 36px;
   line-height: 50px;
   font-family: "Space Mono", monospace;
   font-weight: 600;
@@ -237,7 +237,7 @@ a {
   }
 
   .name-text {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .catchy-phrase {
@@ -262,7 +262,7 @@ a {
   }
 
   .name-text {
-    font-size: 34px;
+    font-size: 24px;
     line-height: 2.2rem;
   }
 
@@ -286,7 +286,7 @@ a {
   }
 
   .name-text {
-    font-size: 25px;
+    font-size: 16px;
     line-height: 28px;
   }
 
