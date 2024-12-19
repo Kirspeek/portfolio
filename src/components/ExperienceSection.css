@@ -29,6 +29,10 @@
   border: none;
   text-align: left;
   color: #808080;
+  font-family: "Space Mono", monospace;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .tabs-trigger::before {
@@ -159,12 +163,12 @@
 
 .exp-title {
   font-size: 20px;
-  color: #b8b8b8;
+  color: #808080;
   padding: 0 0 0 30px;
 }
 
 .exp-date {
-  color: #b8b8b8;
+  color: #808080;
   font-size: 14px;
   letter-spacing: 0.75px;
   margin: 0 0 12px 0;
@@ -175,19 +179,21 @@
 .exp-bullets {
   list-style: none;
   padding-left: 0;
-  color: #b8b8b8;
+  color: #808080;
 }
 
 .exp-bullets li {
   position: relative;
   padding-left: 30px;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 26px;
 }
 
-.exp-bullets li:hover {
-  color: #fff;
+.exp-bullets li:hover,
+.exp-title:hover,
+.exp-date:hover {
+  color: #b9b9b9;
 }
 
 .exp-bullets li::before {

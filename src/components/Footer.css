@@ -1,11 +1,9 @@
 .footer {
-  color: #b8b8b8;
-  font-family: "Source Code Pro", monospace;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
+  color: #808080;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  letter-spacing: 3px;
   font-size: 10px;
   text-align: center;
   padding: 3rem 2rem;
