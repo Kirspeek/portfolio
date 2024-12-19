@@ -224,7 +224,7 @@ body.with-sidebar {
     height: 24px;
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .section-button-mobile {
     font-size: 18px;
     padding: 0.5rem;
