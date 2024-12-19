@@ -16,7 +16,9 @@ body,
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
 }
-
+html {
+  scroll-behavior: auto;
+}
 body {
   margin: 0;
   padding: 0;
@@ -25,9 +27,3 @@ body {
   background: rgb(0, 0, 0);
   color: #fff;
 }
-
-/* ff4200 
-ff4500
-rgb(178, 92, 64)
-#85391f
-*/

@@ -14,6 +14,7 @@
   position: relative;
   border-left: 10px solid rgba(20, 20, 20);
   border-right: 10px solid rgba(20, 20, 20);
+  will-change: transform;
 }
 
 .code-tab.animate {
