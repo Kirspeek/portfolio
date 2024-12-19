@@ -1,10 +1,37 @@
 import React from "react";
+import { useEffect, useRef } from "react";
 import "./Lego.css";
 
 const Lego: React.FC = () => {
+  const aboutIntroRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("Element is intersecting:", entry.target);
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (aboutIntroRef.current) {
+      console.log("Observer is observing:", aboutIntroRef.current);
+      observer.observe(aboutIntroRef.current);
+    }
+    return () => {
+      if (aboutIntroRef.current) {
+        console.log("Cleaning up observer for:", aboutIntroRef.current);
+        observer.unobserve(aboutIntroRef.current);
+      }
+    };
+  }, []);
   return (
     <main>
-      <div className="tower">
+      <div ref={aboutIntroRef} className="tower">
         <div className="tower__group">
           <div className="tower__brick-layer tower__brick-layer--4">
             <div className="tower__brick tower__brick--0">

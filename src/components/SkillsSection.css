@@ -15,7 +15,6 @@
   position: relative;
   max-width: 3000px;
   margin: 0 auto;
-  padding: 5rem 0 5rem 0;
 }
 
 .about-intro,
@@ -177,7 +176,7 @@
     line-height: 20px;
   }
   .code-right {
-    padding: 5rem 0 5rem 0;
+    padding-top: 3rem;
   }
 }
 @media screen and (min-width: 2550px) {

@@ -37,9 +37,9 @@ function ExperienceSection() {
       <div className="flex flex-col justify-center w-full">
         <SectionTitle sectionNumber="03" name="Where I've Worked" />
 
-        <div className="tabs-container pt-12 flex flex-col md:flex-row">
+        <div className="tabs-container flex flex-col md:flex-row">
           {/* Desktop Buttons */}
-          <div className="tabs-list hidden invisible md:flex flex-col md:visible min-w-48 items-center justify-center">
+          <div className="tabs-list md:flex flex-col min-w-48 items-center justify-center">
             <button
               className={`tabs-trigger w-full ${
                 activeTab === "tab1" ? "active" : ""

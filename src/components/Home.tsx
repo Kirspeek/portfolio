@@ -11,20 +11,18 @@ function Home() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.remove("hidden");
-            observer.unobserve(entry.target); // Unobserve after animation
+            observer.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.1 }
     );
 
-    // Observe all non-null elements
     homeRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      // Cleanup observer
       homeRefs.current.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });

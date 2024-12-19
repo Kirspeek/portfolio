@@ -699,25 +699,7 @@ main {
     transform: translate3d(-0.5em, 0.5em, 9.6em);
   }
 }
-@keyframes message-fade-in {
-  from {
-    opacity: 0;
-  }
-  6%,
-  to {
-    opacity: 1;
-  }
-}
-@keyframes message-fade-in-out {
-  from,
-  to {
-    opacity: 0;
-  }
-  6%,
-  94% {
-    opacity: 1;
-  }
-}
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -793,5 +775,36 @@ main {
   }
   .text-lego {
     font-size: 12px;
+  }
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.tower {
+  opacity: 0;
+  transform: translateX(50px); /* Start from the right */
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease; /* Smooth transition */
+}
+
+.tower.animate {
+  animation: slideInFromRight 1.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+/* Keyframes for Slide In from Right */
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); /* Start off-screen */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
   }
 }

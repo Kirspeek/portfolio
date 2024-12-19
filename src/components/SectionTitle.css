@@ -12,6 +12,7 @@
   gap: 10px; /* Space between the number and title */
   text-align: center;
   width: 100%;
+  margin: 3rem 0 3rem 0;
 }
 
 .section-number {
@@ -49,9 +50,7 @@
     display: none;
     visibility: hidden;
   }
-  .name-section {
-    padding: 1rem;
-  }
+
   .section-number {
     font-size: 18px;
   }
@@ -82,8 +81,5 @@
   .section-name::after {
     display: none;
     visibility: hidden;
-  }
-  .name-section {
-    padding: 1rem 0 5rem 0;
   }
 }

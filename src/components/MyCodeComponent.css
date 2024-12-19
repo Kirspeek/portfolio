@@ -1,3 +1,4 @@
+/* Default Styles */
 .code-tab {
   width: 600px;
   height: 580px;
@@ -11,28 +12,40 @@
   transition:
     opacity 1.5s ease,
     transform 1.5s ease; /* Smooth and slower */
+  position: relative;
+  border-left: 10px solid rgba(20, 20, 20); /* Add left border */
+  border-right: 10px solid rgba(20, 20, 20);
 }
 
 .code-tab.animate {
   opacity: 1;
   transform: translateX(0); /* Slide to the final position */
 }
+
 .code-container {
-  width: 100%;
-  height: 100%;
   overflow-y: auto;
+  height: calc(100% - 40px); /* Adjust for header height */
   padding: 10px; /* Add padding for better readability */
   box-sizing: border-box; /* Include padding in width/height calculations */
+  position: relative; /* Keep pre aligned properly */
 }
 
 .code-container pre {
-  width: 580px; /* Fixed width */
-  height: 515px; /* Fixed height */
+  width: 100%; /* Make it fit the container width */
+  height: 100%; /* Take up full height of .code-container */
+  margin: 0; /* Remove default margin */
+  padding: 10px; /* Add internal padding for readability */
   font-size: 12px;
   line-height: 1.5;
-  margin: auto; /* Remove default margin */
+  background-color: rgba(0, 0, 0, 0.9); /* Dark fixed background */
+  border-radius: 0; /* Remove any extra rounding */
+  position: absolute; /* Lock it to the container */
+  top: 0; /* Align with the top of the container */
+  left: 0;
+  overflow: auto; /* Scrollable within the defined space */
 }
 
+/* Tab Header Styles */
 .tab-header {
   display: flex;
   align-items: center;
@@ -61,30 +74,42 @@
   background-color: rgb(56, 189, 248);
 }
 
+/* Responsive Styles */
+
+/* Small Screens */
 @media screen and (max-width: 376px) {
   .code-tab {
     width: 300px;
+    height: 480px;
   }
 
-  .code-container {
-    padding: 0px;
+  .code-container pre {
+    font-size: 10px;
   }
 }
 
-@media screen and (min-width: 2550px) {
-  .code-container pre {
-    width: 780px; /* Fixed width */
-    height: 1000px;
-    font-size: 24px;
-    line-height: 1.5;
-  }
+/* Large Screens */
+@media screen and (min-width: 1440px) {
   .code-tab {
-    width: 800px; /* Fixed width */
-    height: 1100px; /* Fixed height */
-    background-color: rgb(20, 20, 20);
-    margin: auto; /* Center horizontally */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 800px;
+    height: 680px;
+  }
+
+  .code-container pre {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* Ultra-Large Screens */
+@media screen and (min-width: 2550px) {
+  .code-tab {
+    width: 1000px;
+    height: 840px;
+  }
+
+  .code-container pre {
+    font-size: 18px;
+    line-height: 1.8;
   }
 }

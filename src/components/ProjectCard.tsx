@@ -47,15 +47,16 @@ const ProjectCard = forwardRef<HTMLDivElement, Props>(
     const projectImages = getImageByName(name);
 
     return (
-      <div ref={ref} className="project-card flex lg:flex-row">
+      <div ref={ref} className="project-card">
+        {" "}
         <div className="left-container">
           <div className="flex flex-row w-full items-center justify-between">
-            <div className="project-title">
+            <h3 className="project-title">
               <a href={liveLink} target="_blank" rel="noopener noreferrer">
                 {name}
               </a>
-            </div>
-            <div>
+            </h3>
+            <div className="icons">
               <a
                 href={repoLink}
                 target="_blank"
@@ -76,25 +77,24 @@ const ProjectCard = forwardRef<HTMLDivElement, Props>(
               )}
             </div>
           </div>
-          <div className="project-desc">{description}</div>
+          <p className="project-desc">{description}</p>
           <ul className="tech-stack">
             {skills.map((skill) => (
               <li key={skill}>{skill}</li>
             ))}
           </ul>
         </div>
-
-        <div className="image-wraper-container xl:flex flex-1 px-8 items-center relative">
+        <div className="image-wrapper-container">
           <div className="image-wrapper">
             <img
               src={projectImages.static}
               alt={`${name} Static Image`}
-              className="static-image xl:max-w-sm"
+              className="static-image"
             />
             <img
               src={projectImages.gif}
               alt={`${name} Animated Image`}
-              className="animated-image xl:max-w-sm"
+              className="animated-image"
             />
             <div className="hover-bg"></div>
           </div>
