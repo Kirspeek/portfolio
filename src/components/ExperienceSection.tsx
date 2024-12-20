@@ -57,7 +57,7 @@ function ExperienceSection() {
   return (
     <div
       id="experience"
-      className="section min-h-screen w-full px-8 px-4 flex items-center"
+      className="section min-h-screen w-full px-4 flex items-center"
     >
       <div className="flex flex-col justify-center w-full">
         <SectionTitle sectionNumber="03" name="Where I've Worked" />

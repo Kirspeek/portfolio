@@ -2,13 +2,13 @@
 
 <br />
 <div align="center">
-  <a href="https://iryna-che-portfolio.vercel.app/">
-    <img src="src/assets/10.jpg" alt="Logo" height="70px" width="auto" >
+  <a href="https://www.kirspeek.dev/">
+    <img src="src/assets/5.jpg" alt="Logo" height="50px" width="auto" >
   </a>
   
   <h3 align="center">Personal Portfolio</h3>
   <p align="center">
-    <a href="https://iryna-che-portfolio.vercel.app/">View Website</a>
+    <a href="https://www.kirspeek.dev/">View Website</a>
     ·
     <a href="https://github.com/Kirspeek/portfolio">Code</a>
   </p>
@@ -21,7 +21,7 @@
 ## About The Project
 
 <p align="center">
-   <a href="https://iryna-che-portfolio.vercel.app/">
+   <a href="https://www.kirspeek.dev/">
 
   </a>
 </p>

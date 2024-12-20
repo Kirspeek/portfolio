@@ -120,6 +120,7 @@
   .skills-section {
     flex-direction: column;
     align-items: center;
+    padding: 0 1.5rem;
   }
 
   .about-intro,
@@ -139,6 +140,10 @@
   .code-right {
     padding: 50px;
   }
+
+  .main-section {
+    padding-top: 3rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -156,25 +161,13 @@
   .about-intro {
     font-size: 12px;
     line-height: 24px;
+    padding-top: 2rem;
   }
   .code-right {
-    padding: 5rem 0 0rem 0;
+    padding: 5rem 0 2rem 0;
   }
 }
-@media screen and (max-width: 1200px) {
-  .skills-section {
-    padding: 0 1.5rem;
-  }
 
-  .about-intro,
-  .code-right {
-    max-width: 100%;
-    padding: 1rem;
-  }
-  .main-section {
-    padding-top: 3rem;
-  }
-}
 @media screen and (max-width: 376px) {
   .about-intro {
     font-size: 10px;

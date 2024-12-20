@@ -50,10 +50,10 @@ function Home() {
         <p className="max-w-full lg:max-w-xl faded-text d-parag">
           I’m a{" "}
           <a className="one" href="https://github.com/Kirspeek" target="blank">
-            frontend engineer
+            software engineer
           </a>{" "}
-          specializing in building (and occasionally designing) exceptional
-          digital experiences. Currently, I’m focused on upskilling my skills in{" "}
+          specializing in building exceptional digital platforms. Currently, I’m
+          focused on enhancing my skills in{" "}
           <a className="two" href="https://github.com/Kirspeek" target="blank">
             React
           </a>{" "}
