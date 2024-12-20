@@ -42,7 +42,6 @@
   transition:
     opacity 1.5s ease,
     transform 1.5s ease;
-  will-change: transform;
 }
 
 .about-intro.animate {
