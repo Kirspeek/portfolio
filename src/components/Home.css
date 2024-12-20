@@ -139,30 +139,6 @@
   height: 2px;
 }
 
-.one:hover::after {
-  background-color: var(--yellow-color);
-}
-
-.two:hover::after {
-  background-color: var(--blue-color);
-}
-
-.three:hover::after {
-  background-color: var(--red-color);
-}
-
-.one:hover {
-  border-bottom: 2px solid var(--yellow-color);
-}
-
-.two:hover {
-  border-bottom: 2px solid var(--blue-color);
-}
-
-.three:hover {
-  border-bottom: 3px solid var(--red-color);
-}
-
 a {
   text-decoration: none;
   color: inherit;
